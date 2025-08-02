@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Theme Toggle -->
+        <div class="theme-toggle">
+            <i class="ri-sun-line light-icon"></i>
+            <i class="ri-moon-line dark-icon"></i>
+        </div>
+
+        <!-- Header Section -->
+        <div class="header">
+            <div class="user-info">
+                <div class="avatar">
+                    <img src="/img/KCX-avata.jpeg" alt="User avatar">
+                </div>
+                <div>
+                    <div class="welcome-text">Welcome back,</div>
+                    <div class="user-name">Chi</div>
+                </div>
+            </div>
+            <!-- <div class="notification-icon">
+                <i class="ri-notification-3-line"></i>
+            </div> -->
+        </div>
+
+        <!-- Balance Card -->
+        <div class="balance-card">
+            <div class="balance-label">
+                Available balance
+                <button class="toggle-balance" aria-label="Toggle balance visibility">
+                    <i class="ri-eye-line show-balance"></i>
+                    <i class="ri-eye-off-line hide-balance"></i>
+                </button>
+            </div>
+            <div class="balance-amount">₦0.00</div>
+            <div class="balance-actions">
+                <button class="action-button send-money">
+                    <i class="ri-send-plane-line"></i> Send money
+                </button>
+                <button class="action-button fund-wallet">
+                    <i class="ri-wallet-3-line"></i> Fund wallet
+                </button>
+            </div>
+        </div>
+
+        <!-- Action Items -->
+        <div class="action-item">
+            <div class="action-item-left">
+                <div class="action-icon">
+                    <i class="ri-shield-keyhole-line"></i>
+                </div>
+                <div>
+                    <div class="action-text">Set your security Question</div>
+                    <div class="action-subtext">Do more with WalletWise</div>
+                </div>
+            </div>
+            <i class="ri-arrow-right-s-line"></i>
+        </div>
+
+        <div class="action-item">
+            <div class="action-item-left">
+                <div class="action-icon">
+                    <i class="ri-user-3-line"></i>
+                </div>
+                <div>
+                    <div class="action-text">Complete your KYC</div>
+                    <div class="action-subtext">Do more with WalletWise</div>
+                </div>
+            </div>
+            <i class="ri-arrow-right-s-line"></i>
+        </div>
+
+        <!-- Services Grid -->
+        <div class="services-grid">
+            <a href="#airtime" class="service-item">
+                <div class="service-icon">
+                    <i class="ri-smartphone-line"></i>
+                </div>
+                <div class="service-name">Airtime</div>
+            </a>
+            <a href="#data" class="service-item">
+                <div class="service-icon">
+                    <i class="ri-wifi-line"></i>
+                </div>
+                <div class="service-name">Data</div>
+            </a>
+            <a href="#betting" class="service-item">
+                <div class="service-icon">
+                    <i class="ri-gamepad-line"></i>
+                </div>
+                <div class="service-name">Betting</div>
+            </a>
+            <a href="#cable" class="service-item">
+                <div class="service-icon">
+                    <i class="ri-tv-2-line"></i>
+                </div>
+                <div class="service-name">Cable</div>
+            </a>
+            <a href="#qr-pay" class="service-item">
+                <div class="service-icon">
+                    <i class="ri-qr-code-line"></i>
+                </div>
+                <div class="service-name">QR Pay</div>
+            </a>
+            <a href="#electricity" class="service-item">
+                <div class="service-icon">
+                    <i class="ri-lightbulb-line"></i>
+                </div>
+                <div class="service-name">Electricity</div>
+            </a>
+            <a href="#gift-card" class="service-item">
+                <div class="service-icon">
+                    <i class="ri-gift-2-line"></i>
+                </div>
+                <div class="service-name">Gift card</div>
+            </a>
+            <a href="#more" class="service-item">
+                <div class="service-icon">
+                    <i class="ri-more-2-fill"></i>
+                </div>
+                <div class="service-name">More</div>
+            </a>
+        </div>
+
+        <!-- Transactions Section -->
+        <!-- Add this inside the container div, after the transactions-header -->
+        <div class="transactions-section">
+            <div class="transactions-header">
+                <h2>Transactions</h2>
+                <a href="#" class="view-all">View all</a>
+            </div>
+        
+            <!-- No Records State -->
+            <div class="no-transactions">
+                <img src="/img/transactionno.png" alt="No transactions" class="no-records-icon">
+                <p class="no-records-text">No transactions yet</p>
+                <p class="no-records-subtext">Your transactions will appear here</p>
+            </div>
+        
+            <!-- Transaction List (Initially hidden, show when there are transactions) -->
+            <div class="transactions-list" style="display: none;">
+                <div class="transaction-item">
+                    <div class="transaction-icon sent">
+                        <i class="ri-arrow-up-line"></i>
+                    </div>
+                    <div class="transaction-info">
+                        <div class="transaction-title">Sent to John</div>
+                        <div class="transaction-date">Today, 2:30 PM</div>
+                    </div>
+                    <div class="transaction-amount sent">-₦5,000</div>
+                </div>
+        
+                <div class="transaction-item">
+                    <div class="transaction-icon received">
+                        <i class="ri-arrow-down-line"></i>
+                    </div>
+                    <div class="transaction-info">
+                        <div class="transaction-title">Received from Sarah</div>
+                        <div class="transaction-date">Yesterday, 4:15 PM</div>
+                    </div>
+                    <div class="transaction-amount received">+₦12,000</div>
+                </div>
+        
+                <div class="transaction-item">
+                    <div class="transaction-icon">
+                        <i class="ri-smartphone-line"></i>
+                    </div>
+                    <div class="transaction-info">
+                        <div class="transaction-title">Airtime Purchase</div>
+                        <div class="transaction-date">23 Oct, 11:30 AM</div>
+                    </div>
+                    <div class="transaction-amount sent">-₦1,000</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <a href="#" class="nav-item active">
+            <i class="ri-home-5-line nav-icon"></i>
+            <div class="nav-text">Home</div>
+        </a>
+        <a href="/services.html" class="nav-item">
+            <i class="ri-apps-2-line nav-icon"></i>
+            <div class="nav-text">Services</div>
+        </a>
+        <a href="#" class="nav-item">
+            <i class="ri-wallet-3-line nav-icon"></i>
+            <div class="nav-text">Wallet</div>
+        </a>
+        <a href="#" class="nav-item">
+            <i class="ri-user-3-line nav-icon"></i>
+            <div class="nav-text">Profile</div>
+        </a>
+    </nav>
+
+    <script src="theme.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
