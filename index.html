@@ -42,15 +42,17 @@
             </div>
             <div class="balance-amount">₦146,080.00</div>
             <div class="balance-actions">
-                <button class="action-button send-money">
+                <a id="sendMoneyModal" class="action-button send-money">
                     <i class="ri-send-plane-line"></i> Send money
-                </button>
-                <button class="action-button fund-wallet">
+                </a>
+                
+            
+                <a href="#fund-wallet" class="action-button fund-wallet">
                     <i class="ri-wallet-3-line"></i> Fund wallet
-                </button>
+                </a>
             </div>
         </div>
-
+      
         <!-- Action Items -->
         <div class="action-item">
             <div class="action-item-left">
@@ -203,7 +205,49 @@
         </a>
     </nav>
 
+       <!-- Modal content (initially hidden) -->
+<div id="modalOverlay" class="modal-overlay"></div>
+<div id="sendMoneyModalContent" class="modal-content">
+    <a href="#tag" class="modal-option">
+        <div class="option-icon walletwise-icon">
+            <i class="ri-wallet-3-line"></i>
+        </div>
+        <div class="option-text">
+            <h3>Send to $tag</h3>
+            <p>Send to walletwise account</p>
+        </div>
+        <i class="ri-arrow-right-s-line chevron"></i>
+    </a>
+    <a href="#bank" class="modal-option">
+        <div class="option-icon bank-icon">
+            <i class="ri-bank-line"></i>
+        </div>
+        <div class="option-text">
+            <h3>Send to Bank Account</h3>
+            <p>Send to local bank account</p>
+        </div>
+        <i class="ri-arrow-right-s-line chevron"></i>
+    </a>
+</div>
+
+<script>
+document.getElementById('sendMoneyModal').addEventListener('click', function() {
+    const modal = document.getElementById('sendMoneyModalContent');
+    const overlay = document.getElementById('modalOverlay');
+    
+    modal.classList.toggle('show');
+    overlay.classList.toggle('show');
+    
+    // Close modal when clicking on overlay
+    overlay.addEventListener('click', function() {
+        modal.classList.remove('show');
+        overlay.classList.remove('show');
+    });
+});
+</script>
+
     <script src="theme.js"></script>
     <script src="script.js"></script>
+   
 </body>
 </html>

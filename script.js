@@ -36,6 +36,50 @@ document.querySelectorAll('.nav-item').forEach(item => {
 
 // Add this to your existing script.js
 
+// Modal functionality
+const sendMoneyButton = document.querySelector('.send-money');
+const modal = document.getElementById('sendMoneyModal');
+
+// Open modal
+sendMoneyButton.addEventListener('click', () => {
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+});
+
+// Close modal when clicking overlay
+modal.addEventListener('click', (e) => {
+    if (e.target === modal || e.target.classList.contains('modal-overlay')) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+});
+
+// Add touch swipe down to close
+let touchStart = null;
+let touchEnd = null;
+
+modal.addEventListener('touchstart', (e) => {
+    touchStart = e.touches[0].clientY;
+});
+
+modal.addEventListener('touchmove', (e) => {
+    if (!touchStart) return;
+    
+    touchEnd = e.touches[0].clientY;
+    const distance = touchEnd - touchStart;
+    
+    if (distance > 50) { // If swipe down is more than 50px
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+        touchStart = null;
+        touchEnd = null;
+    }
+});
+
+modal.addEventListener('touchend', () => {
+    touchStart = null;
+    touchEnd = null;
+});
 // Toggle between no records and transaction list (for demo purposes)
 const toggleTransactions = () => {
     const noTransactions = document.querySelector('.no-transactions');
