@@ -82,23 +82,24 @@
 
         <!-- Services Grid -->
         <div class="services-grid">
-            <a href="#airtime" class="service-item">
+            <a href="/airtime.html" class="service-item">
                 <div class="service-icon">
                     <i class="ri-smartphone-line"></i>
                 </div>
                 <div class="service-name">Airtime</div>
             </a>
-            <a href="#data" class="service-item">
+            <a href="data.html" class="service-item">
                 <div class="service-icon">
                     <i class="ri-wifi-line"></i>
                 </div>
                 <div class="service-name">Data</div>
             </a>
-            <a href="#betting" class="service-item">
+            <a href="/exchange.html" class="service-item">
                 <div class="service-icon">
-                    <i class="ri-gamepad-line"></i>
+                    <i class="ri-exchange-dollar-line"></i>
+
                 </div>
-                <div class="service-name">Betting</div>
+                <div class="service-name">Exchange</div>
             </a>
             <a href="#cable" class="service-item">
                 <div class="service-icon">
@@ -118,7 +119,7 @@
                 </div>
                 <div class="service-name">Electricity</div>
             </a>
-            <a href="#gift-card" class="service-item">
+            <a href="/giftcards.html" class="service-item">
                 <div class="service-icon">
                     <i class="ri-gift-2-line"></i>
                 </div>
@@ -185,25 +186,7 @@
         </div>
     </div>
 
-    <!-- Bottom Navigation -->
-    <nav class="bottom-nav">
-        <a href="#" class="nav-item active">
-            <i class="ri-home-5-line nav-icon"></i>
-            <div class="nav-text">Home</div>
-        </a>
-        <a href="services.html" class="nav-item">
-            <i class="ri-apps-2-line nav-icon"></i>
-            <div class="nav-text">Services</div>
-        </a>
-        <a href="#" class="nav-item">
-            <i class="ri-wallet-3-line nav-icon"></i>
-            <div class="nav-text">Wallet</div>
-        </a>
-        <a href="#" class="nav-item">
-            <i class="ri-user-3-line nav-icon"></i>
-            <div class="nav-text">Profile</div>
-        </a>
-    </nav>
+   
 
        <!-- Modal content (initially hidden) -->
 <div id="modalOverlay" class="modal-overlay"></div>
@@ -214,7 +197,7 @@
         </div>
         <div class="option-text">
             <h3>Send to $tag</h3>
-            <p>Send to walletwise account</p>
+            <p>Send to wallet wise account</p>
         </div>
         <i class="ri-arrow-right-s-line chevron"></i>
     </a>
@@ -229,22 +212,28 @@
         <i class="ri-arrow-right-s-line chevron"></i>
     </a>
 </div>
+</div>
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+            <a href="index.html" class="nav-item active">
+                <i class="ri-home-5-line"></i>
+                <span>Home</span>
+            </a>
+            <a href="services.html" class="nav-item">
+                <i class="ri-apps-line"></i>
+                <span>Services</span>
+            </a>
+            <a href="#wallet" class="nav-item">
+                <i class="ri-wallet-3-line"></i>
+                <span>Wallet</span>
+            </a>
+            <a href="profile.html" class="nav-item">
+                <i class="ri-user-3-line"></i>
+                <span>Profile</span>
+            </a>
+        </nav>
+</div>
 
-<script>
-document.getElementById('sendMoneyModal').addEventListener('click', function() {
-    const modal = document.getElementById('sendMoneyModalContent');
-    const overlay = document.getElementById('modalOverlay');
-    
-    modal.classList.toggle('show');
-    overlay.classList.toggle('show');
-    
-    // Close modal when clicking on overlay
-    overlay.addEventListener('click', function() {
-        modal.classList.remove('show');
-        overlay.classList.remove('show');
-    });
-});
-</script>
 
     <script src="theme.js"></script>
     <script src="script.js"></script>

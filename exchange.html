@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exchange - WalletWise</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header with Back Button -->
+        <div class="page-header">
+            <a href="javascript:history.back()" class="back-button">
+                <i class="ri-arrow-left-s-line"></i>
+            </a>
+            <h1>Exchange</h1>
+        </div>
+
+        <!-- Exchange Card -->
+        <div class="exchange-card">
+            <!-- You Send Section -->
+            <div class="exchange-section">
+                <label>You send</label>
+                <div class="amount-input">
+                    <input type="number" id="sendAmount" value="10" min="0">
+                    <button class="currency-select" id="sendCurrency">
+                        <span class="flag">🇨🇦</span>
+                        <span class="currency-code">CAD</span>
+                        <i class="ri-arrow-down-s-line"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Exchange Rate -->
+            <div class="exchange-rate">
+                <span>1 CAD = 1,120 NGN</span>
+            </div>
+
+            <!-- They Get Section -->
+            <div class="exchange-section">
+                <label>They get</label>
+                <div class="amount-input">
+                    <div class="receive-amount" id="receiveAmount">11,200.00</div>
+                    <button class="currency-select" id="receiveCurrency">
+                        <span class="flag">🇳🇬</span>
+                        <span class="currency-code">NGN</span>
+                        <i class="ri-arrow-down-s-line"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Send Button -->
+            <button class="continue-button" id="sendMoneyBtn">Send Money Now</button>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <i class="ri-checkbox-circle-line success-icon"></i>
+            <h2>Success!</h2>
+            <p>Your money transfer has been initiated.</p>
+            <button class="modal-close-btn" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+  <!-- Bottom Navigation -->
+  <nav class="bottom-nav">
+    <a href="index.html" class="nav-item">
+        <i class="ri-home-5-line"></i>
+        <span>Home</span>
+    </a>
+    <a href="services.html" class="nav-item active">
+        <i class="ri-apps-line"></i>
+        <span>Services</span>
+    </a>
+    <a href="#wallet" class="nav-item">
+        <i class="ri-wallet-3-line"></i>
+        <span>Wallet</span>
+    </a>
+    <a href="profile.html" class="nav-item">
+        <i class="ri-user-3-line"></i>
+        <span>Profile</span>
+    </a>
+</nav>
+</div>
+
+<script src="theme.js"></script>
+<script src="script.js"></script>
+    <script src="exchange.js"></script>
+</body>
+</html>

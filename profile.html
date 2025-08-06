@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - WalletWise</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+     
+        <!-- Header with Back Button -->
+        <div class="page-header">
+            <a href="javascript:history.back()" class="back-button">
+                <i class="ri-arrow-left-s-line"></i>
+            </a>
+            <h1>Profile</h1>
+        </div>
+
+        <!-- Profile Section -->
+        <div class="profile-section">
+            <div class="profile-header">
+                <div class="profile-avatar">
+                    <img src="/img/KCX-avata.jpeg" alt="Profile picture">
+                    <div class="tier-badge">Tier 1</div>
+                </div>
+                <h1 class="profile-name">Chi Plug</h1>
+                <div class="profile-tag">$chipplug</div>
+                <button class="edit-profile-btn">Edit Profile</button>
+            </div>
+
+            <div class="settings-list">
+                <a href="#security" class="settings-item">
+                    <div class="settings-item-left">
+                        <i class="ri-shield-line"></i>
+                        <span>Security</span>
+                    </div>
+                    <i class="ri-arrow-right-s-line"></i>
+                </a>
+
+                <a href="#tier-limits" class="settings-item">
+                    <div class="settings-item-left">
+                        <i class="ri-vip-crown-line"></i>
+                        <span>Tier limits</span>
+                    </div>
+                    <i class="ri-arrow-right-s-line"></i>
+                </a>
+
+                <div class="settings-item">
+                    <div class="settings-item-left">
+                        <i class="ri-fingerprint-line"></i>
+                        <span>Enable Biometrics</span>
+                    </div>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="biometricsToggle" checked>
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+
+                <div class="settings-item"> 
+                    <div class="settings-item-left"> 
+                        <i class="ri-moon-line"></i> 
+                        <span>Enable Darkmode</span> 
+                    </div> 
+                    <label class="toggle-switch"> 
+                        <input type="checkbox" id="darkmodeToggle" onchange="handleDarkModeToggle(this)"> 
+                        <span class="toggle-slider"></span> 
+                    </label> 
+                </div>
+                <a href="#notifications" class="settings-item">
+                    <div class="settings-item-left">
+                        <i class="ri-notification-line"></i>
+                        <span>Notifications</span>
+                    </div>
+                    <i class="ri-arrow-right-s-line"></i>
+                </a>
+
+                <a href="#" class="settings-item">
+                    <div class="settings-item-left">
+                        <i class="ri-file-text-line"></i>  <!-- More appropriate for Terms -->
+                        <span>Terms and Conditions</span>
+                    </div>
+                    <i class="ri-arrow-right-s-line"></i>
+                </a>
+                
+                <a href="#tier-limits" class="settings-item">
+                    <div class="settings-item-left">
+                        <i class="ri-question-line"></i>  <!-- Better for Help/FAQ -->
+                        <span>Help: FAQ, Chat, Email</span>
+                    </div>
+                    <i class="ri-arrow-right-s-line"></i>
+                </a>
+                
+                <a href="#tier-limits" class="settings-item">
+                    <div class="settings-item-left">
+                        <i class="ri-delete-bin-line"></i>  <!-- More appropriate for account deletion -->
+                        <span>Close Account</span>
+                    </div>
+                    <i class="ri-arrow-right-s-line"></i>
+                </a>
+                
+                <a href="#" class="settings-item">
+                    <div class="settings-item-left">
+                        <i class="ri-logout-box-r-line"></i>  <!-- Specific logout icon -->
+                        <span>Log out</span>
+                    </div>
+                    <i class="ri-arrow-right-s-line"></i>
+                </a>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+            <a href="index.html" class="nav-item">
+                <i class="ri-home-5-line"></i>
+                <span>Home</span>
+            </a>
+            <a href="services.html" class="nav-item">
+                <i class="ri-apps-line"></i>
+                <span>Services</span>
+            </a>
+            <a href="#wallet" class="nav-item">
+                <i class="ri-wallet-3-line"></i>
+                <span>Wallet</span>
+            </a>
+            <a href="#profile" class="nav-item active">
+                <i class="ri-user-3-line"></i>
+                <span>Profile</span>
+            </a>
+        </nav>
+    </div>
+
+    <script src="theme.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

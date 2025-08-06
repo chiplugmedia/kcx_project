@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Data - WalletWise</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+     
+
+        <!-- Header with Back Button -->
+        <div class="page-header">
+            <a href="javascript:history.back()" class="back-button">
+                <i class="ri-arrow-left-s-line"></i>
+            </a>
+            <h1>Data</h1>
+        </div>
+
+      <!-- Airtime Form -->
+<form id="airtimeForm" class="airtime-form">
+    <div class="form-group">
+        <label for="networkProvider">Network Provider</label>
+        <select id="networkProvider" class="form-control">
+            <option value="">Select Provider</option>
+            <option value="MTN">MTN</option>
+            <option value="GLO">GLO</option>
+            <option value="AIRTEL">AIRTEL</option>
+            <option value="9MOBILE">9MOBILE</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Phone Number</label>
+        <div class="input-wrapper">
+            <input type="tel" id="phoneNumber" placeholder="Enter phone number" pattern="[0-9]{11}" maxlength="11">
+            <button type="button" class="contact-button">
+                <i class="ri-contacts-book-line"></i>
+            </button>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="networkProvider">Data Plan</label>
+        <select id="networkProvider" class="form-control">
+            <option value="">Select Plan</option>
+           
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Amount</label>
+        <div class="input-wrapper">
+            <input type="text" id="amount" placeholder="₦ 0.00" class="amount-input">
+        </div>
+    </div>
+
+
+
+    <button type="submit" class="continue-button" >
+        Continue
+    </button>
+</form>
+
+
+      <!-- Bottom Navigation -->
+      <nav class="bottom-nav">
+        <a href="index.html" class="nav-item">
+            <i class="ri-home-5-line"></i>
+            <span>Home</span>
+        </a>
+        <a href="services.html" class="nav-item active">
+            <i class="ri-apps-line"></i>
+            <span>Services</span>
+        </a>
+        <a href="#wallet" class="nav-item">
+            <i class="ri-wallet-3-line"></i>
+            <span>Wallet</span>
+        </a>
+        <a href="profile.html" class="nav-item">
+            <i class="ri-user-3-line"></i>
+            <span>Profile</span>
+        </a>
+    </nav>
+</div>
+
+    <script src="theme.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
